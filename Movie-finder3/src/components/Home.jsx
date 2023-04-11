@@ -63,19 +63,22 @@ class Home extends React.Component {
     handleChange(event) {
         event.preventDefault();
         this.setState({ searchTerm: event.target.value });
-        console.log(this.state.searchTerm);
+         
     }
     handleSubmit(event) {
         event.preventDefault();
         let {searchTerm} = this.state;
-        searchTerm = searchTerm.trim(); 
+        //searchTerm = searchTerm.trim(); 
         console.log(searchTerm);
         if(!searchTerm) {
             return;
 
         }
-        fetch(`https://ombdapi.com/?s=${searchTerm}&apikey=b7da8d63`)
+        const apiKey = "73740781";
+        
+        fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`)
         .then(response => response.json())
+
         .then(data => {
             if(data.Response === "True") {
                 this.setState({ results: data.Search, error: "" });
