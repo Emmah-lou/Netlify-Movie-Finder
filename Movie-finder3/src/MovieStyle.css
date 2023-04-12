@@ -1,0 +1,134 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ff7eb9;
+  animation: pulse 10s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ff7eb9;
+  }
+  50% {
+    background-color: #cc9db1;
+  }
+  100% {
+    background-color: #ff7eb9;
+  }
+}
+a {
+  color: #ff7eb9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000;
+  margin-top: 2rem;
+}
+
+.movie-search-form {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.movie-search-form .movie-search-input {
+  padding: 0.5rem;
+  border: 2px solid #ff7eb9;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+.movie-search-form .movie-search-input:focus {
+  scale: 1.1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 126, 185, 0.3);
+}
+.movie-search-form button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.movie-search-form button:hover {
+  scale: 1.1;
+  background-color: #ffb1d5;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.search .col-md-2 img,
+.search .col-lg-1 img {
+  border-radius: 0.25rem;
+}
+.search h4 {
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+.search p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ff7eb9;
+}
+
+.movie-page {
+  color: #000;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfb3d1;
+  color: #000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movie-year,
+.movie-genre,
+.movie-director,
+.movie-actors,
+.movie-plot,
+.movie-rating,
+.movie-votes,
+.movie-id,
+.movie-type {
+  margin: 10px 0;
+}
+
+.movie-poster img {
+  max-width: 300px;
+  border-radius: 20px;
+  border: 1px solid #5e5555;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=MovieStyle.css.map */

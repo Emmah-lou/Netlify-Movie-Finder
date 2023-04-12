@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import NotFound from "./NotFound";
 const Movie = (props) => {
   const { Title, Year, imdbID, Type, Poster } = props.movie;
 
   return (
-    <div className="row">
+    <div className="search">
       <div className="col-4 col-md-2 col-lg-1 mb-3">
         <Link to={`/movie/${imdbID}/`}>
           <img src={Poster} className="img-fluid" />
@@ -66,25 +66,24 @@ class Home extends React.Component {
 
     return (
       <div className="container">
+        <h1 className="main-title">Emma-Lou-Who's Netlify Movie Finder</h1>
         <div className="row">
           <div className="col-12">
-            <form onSubmit={this.handleSubmit} className="form-inline my-4">
+            <form onSubmit={this.handleSubmit} className="movie-search-form">
               <input
                 type="text"
-                className="form-control mr-sm-2"
+                className="movie-search-input"
                 placeholder="frozen"
                 value={searchTerm}
                 onChange={this.handleChange}
               />
 
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <button type="submit">Submit</button>
             </form>
 
             {(() => {
               if (error) {
-                return error;
+                return <NotFound />;
               }
 
               return results.map((movie) => {

@@ -16,22 +16,38 @@ const Movie = () => {
   }, [id]);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">Name {movieData.Title} </div>
-        <div className="col-12">Year {movieData.Year} </div>
-        <div className="col-12">Genre {movieData.Genre} </div>
-        <div className="col-12">Director {movieData.Director} </div>
-        <div className="col-12">Actors {movieData.Actors} </div>
-        <div className="col-12">Plot {movieData.Plot} </div>
-        <div className="col-12">
-          <img src={movieData.Poster} />{" "}
+    <div>
+      <h1 className="movie-page">Movie</h1>
+      <div className="movie-container">
+        <div className="movie-title">{movieData.Title} </div>
+        <div className="movie-year">
+          <b>Year - </b>
+          {movieData.Year}
         </div>
-        <div className="col-12">imdbRating {movieData.imdbRating} </div>
-        <div className="col-12">imdbVotes {movieData.imdbVotes} </div>
-        <div className="col-12">imdbID {movieData.imdbID} </div>
-        <div className="col-12">Type {movieData.Type} </div>
-        <div className="col-12">Response {movieData.Response} </div>
+        <div className="movie-genre">
+          <b>Genre - </b>
+          {movieData.Genre}{" "}
+        </div>
+        <div className="movie-director">
+          <b>Director - </b>
+          {movieData.Director}{" "}
+        </div>
+        <div className="movie-actors">
+          <b>Actors - </b>
+          {movieData.Actors}{" "}
+        </div>
+        <div className="movie-plot">
+          <b>Plot - </b>
+          {movieData.Plot}{" "}
+        </div>
+        <div className="movie-poster">
+          <img src={movieData.Poster} />
+        </div>
+        <div className="movie-data">
+          <b>Rating - </b>
+          {movieData.imdbRating} | <b>Votes - </b>
+          {movieData.imdbVotes} | <b>Type - </b> {movieData.Type}
+        </div>
       </div>
     </div>
   );
