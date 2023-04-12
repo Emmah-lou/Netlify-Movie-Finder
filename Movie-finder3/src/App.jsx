@@ -9,13 +9,11 @@ import Movie from "./components/Movie";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="404" element={<NotFound />} />
-      <Route path="/movie/:id" component={<Movie />} />
+      <Route path="/movie/:id" element={<Movie />} />
     </Routes>
   );
 }
